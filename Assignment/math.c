@@ -1,8 +1,8 @@
-/*
- * math.c
- *
- * Author: Sean Prendergast
- */
+// Author: Sean Prendergast
+// Code was initially started on September 5th, 2019
+// Code was last modified on October 14th, 2019
+// Submitted October 17th, 2019
+// Exercise: Lab 1
 
 #ifndef MATH_C_
 #define MATH_C_
@@ -18,6 +18,14 @@
 // math function to correspond with header file (math.h)
 int math(int num1, int num2, char Operator)
 {
+
+    printf("Enter a number:" );
+    scanf("%i %d", &num1);
+    printf("\nEnter a second number:");
+    scanf("%i %d", &num2);
+
+    printf("\nSelect an operation for the two numbers: ");
+    scanf("%c %d", &Operator);
 
     /* switch case statements are implemented
      * in place of several if statements to condense the number of
@@ -44,10 +52,10 @@ int math(int num1, int num2, char Operator)
         case '%':
             return num1 % num2;
         // Case statement for performing shift left
-        case '<<':
+        case '<':
             return num1 << num2;
         // Case statement for performing shift right
-        case '>>':
+        case '>':
             return num1 >> num2;
         // Case statement for performing bitwise AND
         case '&':
@@ -61,11 +69,12 @@ int math(int num1, int num2, char Operator)
         // Case statement for performing bitwise NOT
         case '~':
             return ~num1;
-        // In the result of an error, the default argument will simply return the value of num1
+        // In the result of an error, the program will output "Error: Operation is invalid"
         default:
-            return num1;
+            printf("\n Error: Operation is invalid.");
     }
 
+    return 0;
 }
 
-#endif /* MATH_C_ */
+#endif
