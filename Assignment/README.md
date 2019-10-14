@@ -1,3 +1,7 @@
+# Sean Prendergast
+
+## Lab 1
+
 In this program, a math function was implemented with the capability of 
 being able to perform the following mathematical, logical and shift operations
 for two values referred to as "num1" and "num2". A math.c file was generated for the purpose of matching with
